@@ -1,25 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Characters from "./containers/Characters";
+import Character from "./containers/Character";
+import Comics from "./containers/Comics";
+import Comic from "./containers/Comic";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
+  const [refresh, setRefresh] = useState(false);
+  const [search, setSearch] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header refresh={refresh} setRefresh={setRefresh} setSearch={setSearch} />
+      <Switch>
+        <Route path="/comic/:id">
+          <Comic />
+        </Route>
+        <Route path="/comics">
+          <Comics refresh={refresh} search={search} setSearch={setSearch} />
+        </Route>
+        <Route path="/character/:id">
+          <Character />
+        </Route>
+        <Route path="/">
+          <Characters refresh={refresh} search={search} setSearch={setSearch} />
+        </Route>
+      </Switch>
+      <Footer />
+    </Router>
   );
 }
 
