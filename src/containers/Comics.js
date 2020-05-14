@@ -16,12 +16,11 @@ const Comics = ({ refresh, search, setSearch }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/comics?offset=${offset}`
+          `https://marvel-backend-2020-05-14.herokuapp.com/comics?offset=${offset}`
         );
         setData(response.data);
         setTotalPages(Math.round(response.data.data.total / 100));
         setIsLoading(false);
-        console.log(response.data);
       } catch (error) {
         console.log(error.message);
       }
@@ -34,11 +33,10 @@ const Comics = ({ refresh, search, setSearch }) => {
     try {
       // const offset = (page - 1) * 100;
       const response = await axios.get(
-        `http://localhost:3000/comics?titleStartsWith=${search}`
+        `https://marvel-backend-2020-05-14.herokuapp.com/comics?titleStartsWith=${search}`
       );
       setData(response.data);
       setIsLoading(false);
-      console.log(response.data);
     } catch (error) {
       console.log(error.message);
     }
