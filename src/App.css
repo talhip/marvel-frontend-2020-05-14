@@ -27,7 +27,6 @@ body {
 }
 .characters-button,
 .comics-button {
-  cursor: pointer;
   display: flex;
   align-items: center;
   border-radius: 3px;
@@ -51,6 +50,14 @@ body {
 .character-cv {
   width: 700px;
   margin: 20px 0;
+}
+.character-list:hover,
+.character-info:hover,
+.character-cv:hover,
+.characters-button:hover,
+.comics-button:hover {
+  cursor: pointer;
+  box-shadow: 0 1px 25px 3px #ede6ed;
 }
 .list {
   display: flex;
@@ -79,4 +86,35 @@ input {
 }
 .footer {
   text-align: center;
+}
+.footer a:hover {
+  color: #ee161e;
+}
+.footer a {
+  font-weight: 700;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .header {
+    justify-content: center;
+  }
+  .logo img {
+    margin-right: 10px;
+    height: 40px;
+  }
+  .container {
+    width: 100%;
+  }
+  .character-list,
+  .character-info,
+  .character-cv {
+    overflow: hidden;
+    width: 150px;
+    height: 296px;
+  }
 }
