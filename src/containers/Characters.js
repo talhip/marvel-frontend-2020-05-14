@@ -73,7 +73,9 @@ const Characters = ({ refresh, search, setSearch }) => {
                   onClick={handleCharacter}
                 >
                   <br />
-                  <div>{character.name}</div>
+                  <div>
+                    <h2>{character.name}</h2>
+                  </div>
                   <br />
                   <div>
                     <img
@@ -81,7 +83,9 @@ const Characters = ({ refresh, search, setSearch }) => {
                       src={`${character.thumbnail.path}/portrait_xlarge.jpg`}
                     />
                   </div>
-                  <div>{character.description}</div>
+                  <div>
+                    <h3>{character.description}</h3>
+                  </div>
                 </div>
               );
             })}

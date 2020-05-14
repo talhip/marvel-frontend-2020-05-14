@@ -1,8 +1,9 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import Cookies from "js-cookie";
 import logo from "../assets/img/logo.jpg";
 
-const Header = ({ refresh, setRefresh, setSearch }) => {
+const Header = ({ refresh, setRefresh, setSearch, setTokenCharacter }) => {
   const history = useHistory();
 
   return (
@@ -26,7 +27,7 @@ const Header = ({ refresh, setRefresh, setSearch }) => {
           history.push("/");
         }}
       >
-        Personnages
+        <h1>Personnages</h1>
       </div>
       <div
         className="comics-button"
@@ -36,7 +37,17 @@ const Header = ({ refresh, setRefresh, setSearch }) => {
           history.push("/comics");
         }}
       >
-        Comics
+        <h1>Comics</h1>
+      </div>
+      <div
+        className="favorite-character-button"
+        onClick={() => {
+          const tokens = Cookies.get();
+          setTokenCharacter(tokens);
+          history.push("/favoritecharacter");
+        }}
+      >
+        <h1>Personnages Favoris</h1>
       </div>
       <br />
       <br />

@@ -31,7 +31,6 @@ const Comics = ({ refresh, search, setSearch }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      // const offset = (page - 1) * 100;
       const response = await axios.get(
         `https://marvel-backend-2020-05-14.herokuapp.com/comics?titleStartsWith=${search}`
       );
@@ -74,7 +73,9 @@ const Comics = ({ refresh, search, setSearch }) => {
                   onClick={handleComic}
                 >
                   <br />
-                  <div>{comic.title}</div>
+                  <div>
+                    <h2>{comic.title}</h2>
+                  </div>
                   <br />
                   <div>
                     <img
@@ -82,7 +83,9 @@ const Comics = ({ refresh, search, setSearch }) => {
                       src={`${comic.thumbnail.path}/portrait_xlarge.jpg`}
                     />
                   </div>
-                  <div>{comic.description}</div>
+                  <div>
+                    <h3>{comic.description}</h3>
+                  </div>
                   <br />
                 </div>
               );
