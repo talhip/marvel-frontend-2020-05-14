@@ -43,7 +43,7 @@ const Characters = ({ refresh, search, setSearch }) => {
   return (
     <div className="container">
       {isLoading ? (
-        <div>En cours de chargement ...</div>
+        <div className="loading">En cours de chargement ...</div>
       ) : (
         <div>
           <Search

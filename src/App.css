@@ -84,6 +84,11 @@ input {
   cursor: pointer;
   text-align: center;
 }
+.loading {
+  color: #1f1d1cc6;
+  margin: 300px 0;
+  text-align: center;
+}
 .footer {
   text-align: center;
 }
@@ -110,11 +115,18 @@ input {
   .container {
     width: 100%;
   }
+  .search {
+    display: flex;
+    justify-content: center;
+  }
   .character-list,
   .character-info,
   .character-cv {
     overflow: hidden;
     width: 150px;
     height: 296px;
+  }
+  .loading {
+    margin: 125px 0;
   }
 }
