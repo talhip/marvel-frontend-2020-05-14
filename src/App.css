@@ -126,8 +126,8 @@ input {
     justify-content: center;
   }
   .logo img {
-    margin-right: 10px;
-    height: 40px;
+    margin: 10px 1px 0 1px;
+    width: 40px;
   }
   .characters-button,
   .comics-button,
