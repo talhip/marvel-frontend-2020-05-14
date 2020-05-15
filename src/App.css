@@ -141,6 +141,7 @@ input {
   .search {
     display: flex;
     justify-content: center;
+    top: 35.1px;
   }
   input {
     font-size: 12px;
