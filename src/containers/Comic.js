@@ -10,7 +10,6 @@ const Comic = () => {
     <div className="list">
       <div className="container character-cv">
         <br />
-        <h4>{id} Ajoute moi à tes favoris !</h4>
         <div>
           <h2>{title}</h2>
         </div>

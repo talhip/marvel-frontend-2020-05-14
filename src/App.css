@@ -70,7 +70,8 @@ h4 {
 .character-info:hover,
 .character-cv:hover,
 .characters-button:hover,
-.comics-button:hover {
+.comics-button:hover,
+.favorite-character-button:hover {
   cursor: pointer;
   box-shadow: 0 1px 25px 3px #ede6ed;
 }
@@ -127,6 +128,12 @@ input {
   .logo img {
     margin-right: 10px;
     height: 40px;
+  }
+  .characters-button,
+  .comics-button,
+  .favorite-character-button {
+    width: 90px;
+    margin: 0 1px;
   }
   .container {
     width: 100%;
