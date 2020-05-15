@@ -82,6 +82,7 @@ h4 {
   cursor: pointer;
 }
 .list {
+  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -166,6 +167,9 @@ input {
   h3 {
     font-size: 9px;
     overflow: hidden;
+  }
+  h4 {
+    text-align: center;
   }
   .character-list,
   .character-info,
