@@ -1,8 +1,9 @@
 import React from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useParams, useHistory } from "react-router-dom";
 import Cookies from "js-cookie";
 
 const Character = ({ setTokenCharacter }) => {
+  const history = useHistory();
   const location = useLocation();
   const { id } = useParams();
   const { name, picture, comics } = location.state;
@@ -11,6 +12,7 @@ const Character = ({ setTokenCharacter }) => {
     Cookies.set(`tokenCharacter${id}`, id, { expires: 2000 });
     const tokens = Cookies.get();
     setTokenCharacter(tokens);
+    history.push("/");
   };
 
   return (

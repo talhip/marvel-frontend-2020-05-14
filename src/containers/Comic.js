@@ -1,14 +1,17 @@
 import React from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 
 const Comic = () => {
+  const history = useHistory();
   const location = useLocation();
-  const { id } = useParams();
   const { title, picture, creators } = location.state;
 
   return (
     <div className="list">
-      <div className="container character-cv">
+      <div
+        className="container character-cv"
+        onClick={() => history.push("/comics")}
+      >
         <br />
         <div>
           <h2>{title}</h2>

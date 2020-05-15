@@ -5,6 +5,7 @@ const FavoriteCharacter = ({ tokenCharacter }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([]);
   //   const id = 1011334;
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -19,7 +20,7 @@ const FavoriteCharacter = ({ tokenCharacter }) => {
         // console.log(copyData);
         const newData = [...data];
         newData.push(copyData);
-        console.log(newData);
+        // console.log(newData);
         setData(newData);
 
         setIsLoading(false);
@@ -37,9 +38,31 @@ const FavoriteCharacter = ({ tokenCharacter }) => {
         <div className="loading">En cours de chargement ...</div>
       ) : (
         <div>
-          <h3>
-            Si vous consultez la console et/ou vos cookies ... La liste est là !
-          </h3>
+          {/* {data[0].map((character) => {
+            return <div>{character.name}</div>;
+          })} */}
+          <div className="list">
+            {data[0].map((character) => {
+              return (
+                <div className="character-list" key={character.id}>
+                  <br />
+                  <div>
+                    <h2>{character.name}</h2>
+                  </div>
+                  <br />
+                  <div>
+                    <img
+                      alt={character.name}
+                      src={`${character.thumbnail.path}/portrait_xlarge.jpg`}
+                    />
+                  </div>
+                  <div>
+                    <h3>{character.description}</h3>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       )}
     </div>
