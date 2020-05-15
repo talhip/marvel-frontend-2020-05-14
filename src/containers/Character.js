@@ -17,9 +17,11 @@ const Character = ({ setTokenCharacter }) => {
 
   return (
     <div className="list">
-      <div className="container character-cv" onClick={handleAdd}>
+      <div className="container character-cv favorite-hover">
         <br />
-        <h4>Ajoute-moi à tes favoris !</h4>
+        <h4 className="pointer" onClick={handleAdd}>
+          Ajoute-moi à tes favoris !
+        </h4>
         <br />
         <div>
           <h2>{name}</h2>
