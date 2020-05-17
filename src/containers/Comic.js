@@ -1,17 +1,13 @@
 import React from "react";
-import { useLocation, useHistory } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Comic = () => {
-  const history = useHistory();
   const location = useLocation();
   const { title, picture, creators } = location.state;
 
   return (
     <div className="list">
-      <div
-        className="container character-cv"
-        onClick={() => history.push("/comics")}
-      >
+      <div className="container character-cv favorite-hover">
         <br />
         <div>
           <h2>{title}</h2>
