@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Capture](src/assets/img/capture.png)
+
+This project can be seen here [here](https://frosty-sinoussi-113e3f.netlify.app/).
 
 ## Available Scripts
 
