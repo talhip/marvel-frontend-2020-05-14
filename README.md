@@ -1,6 +1,6 @@
 ![Capture](src/assets/img/capture.png)
 
-This project can be seen here [here](https://frosty-sinoussi-113e3f.netlify.app/).
+This project can be seen [here](https://frosty-sinoussi-113e3f.netlify.app/).
 
 ## Available Scripts
 
